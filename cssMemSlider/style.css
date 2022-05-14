@@ -89,3 +89,18 @@ span {
 span:last-child {
     margin-right: 0;
 }
+
+.text-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.text{
+    display: none;
+}
+
+.text.active {
+    display: flex;
+    font-size: 20px;
+}
