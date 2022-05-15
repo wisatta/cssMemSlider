@@ -29,10 +29,42 @@ const activeText = n => {
     text[n].classList.add('active');
 }
 
+// Animation 
+
+const removeSlideAnimation = () => {
+    slides.forEach(function (el) {
+        el.classList.remove('slide-animation')
+    })
+}
+
+const slideAnimation = () => {
+    slides.forEach(function (slide) {
+        slide.classList.add('slide-animation')
+    })
+    setTimeout(removeSlideAnimation,450);
+}
+
+const removeTextAnimation = () => {
+    text.forEach(function (el) {
+        el.classList.remove('text-animation')
+    })
+}
+
+const textAnimation = () => {
+    text.forEach(function (txt) {
+        txt.classList.add('text-animation')
+    })
+    setTimeout(removeTextAnimation,450);
+}
+
+// Current slide
+
 const prepareCurrentSlide = ind => {
     activeSlide(index);
     activeDot(index);
     activeText(index);
+    slideAnimation();
+    textAnimation();
 }
 
 // Next slide
