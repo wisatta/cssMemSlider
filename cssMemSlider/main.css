@@ -70,6 +70,10 @@ input[name="radio"]{
     transition:  all 0.5s ease;
 }
 
+.slide-text {
+    margin-top: 0.5%;
+}
+
 .mem-text {
     transition:  all 0.5s ease;
     width: 100%;
